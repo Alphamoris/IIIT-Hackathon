@@ -1062,7 +1062,7 @@ Found a bug not listed here? Please help us improve:
 
 **🧞‍♂️ Your wish is Genie's command! Start building the future of Web3 AI today.**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/genie?style=social)](https://github.com/Alphamoris/IIIT-Hackathon.git)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/yourusername?style=social)](https://x.com/@_Alpha_45)
+[![GitHub stars](https://img.shields.io/github/stars/Alphamoris/genie?style=social)](https://github.com/Alphamoris/IIIT-Hackathon.git)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/_Alpha_45?style=social)](https://x.com/@_Alpha_45)
 
 </div>
