@@ -56,7 +56,9 @@ npm install
 npm run build
 
 # 4. Start Genie
-npm exec elizaos start --character characters/genie.character.json
+npx elizaos start --character characters/genie.character.json
+             [or]
+elizaos start --character characters/genie.character.json  #using cli
 ```
 
 🎉 **Genie is now running!** Open your browser to interact with your Web3 AI agent.
@@ -462,53 +464,6 @@ The Genie character is pre-configured in `elizaos-agent/characters/genie.charact
 }
 ```
 
-## 🚦 Starting Genie
-
-### Option 1: Start Everything at Once
-
-```bash
-# From the project root
-./start-genie.sh
-```
-
-### Option 2: Start Components Separately
-
-#### Terminal 1: Start Web3 MCP Server
-```bash
-cd web3-mcp-server
-node build/index.js
-```
-
-You should see:
-```
-✅ Solana tools registered
-✅ EVM tools registered  
-✅ Bitcoin tools registered
-🚀 Web3 MCP Server listening...
-```
-
-#### Terminal 2: Start Genie Agent
-```bash
-cd elizaos-agent
-npm exec elizaos start --character characters/genie.character.json
-```
-
-You should see:
-```
-🧞‍♂️ Genie agent starting...
-✅ Web3 MCP connection established
-🌍 Agent server listening on http://localhost:3000
-```
-
-## 🔍 Verification
-
-### Test Web3 MCP Connection
-
-```bash
-# Test MCP server directly
-cd web3-mcp-server
-echo '{"method": "getMyAddress", "params": {}}' | node build/index.js
-```
 
 ### Test Genie Agent
 
@@ -1092,109 +1047,11 @@ Found a bug not listed here? Please help us improve:
 **Logs**: Relevant log excerpts (sanitized)
 ```
 
-## 🤝 Contributing
-
-### 🐛 Bug Reports
-
-Found a bug? Help us improve Genie!
-
-1. **Check existing issues** on GitHub
-2. **Create a detailed bug report** with:
-   - Steps to reproduce
-   - Expected vs actual behavior  
-   - Environment details
-   - Log excerpts
-
-### 💡 Feature Requests
-
-Have an idea for a new feature?
-
-1. **Search existing feature requests**
-2. **Create a detailed proposal** including:
-   - Use case description
-   - Implementation approach
-   - Potential impact
-
-### 🔧 Development Setup
-
-#### Fork & Clone
-```bash
-# Fork the repository on GitHub
-git clone https://github.com/yourusername/genie.git
-cd genie
-```
-
-#### Development Environment
-```bash
-# Install development dependencies
-npm install --include=dev
-
-# Setup pre-commit hooks
-npm run setup-hooks
-
-# Run tests
-npm test
-```
-
-#### Code Style
-```bash
-# Format code
-npm run format
-
-# Lint code
-npm run lint
-
-# Type check
-npm run type-check
-```
-
-### 📝 Pull Request Process
-
-1. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. **Make your changes**
-   - Follow existing code style
-   - Add tests for new features  
-   - Update documentation
-
-3. **Test thoroughly**
-   ```bash
-   npm run test:full
-   npm run integration-test
-   ```
-
-4. **Submit pull request**
-   - Clear description of changes
-   - Link to related issues
-   - Add screenshots if UI changes
-
-## 📄 License
-
-This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **ElizaOS Team** - For the amazing AI agent framework
-- **Web3 MCP Contributors** - For blockchain integration capabilities  
-- **Blockchain Communities** - For continued innovation and support
-- **Open Source Contributors** - Making Web3 accessible to everyone
-
-## 📞 Support
-
-### 🆘 Getting Help
-
-- **Documentation**: Check this README and inline code comments
-- **GitHub Issues**: Report bugs and request features
-- **Community Discord**: Join our developer community
-- **Stack Overflow**: Tag questions with `genie-web3`
 
 ### 🔗 Useful Links
 
 - [ElizaOS Documentation](https://docs.eliza.org)
-- [Web3 MCP Server](https://github.com/strangelove-ventures/web3-mcp)
+- [Comput3](https://comput3.ai/)
 - [Blockchain Developer Resources](https://ethereum.org/developers)
 - [Solana Developer Docs](https://docs.solana.com)
 
@@ -1204,7 +1061,7 @@ This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) 
 
 **🧞‍♂️ Your wish is Genie's command! Start building the future of Web3 AI today.**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/genie?style=social)](https://github.com/yourusername/genie/stargazers)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/yourusername?style=social)](https://twitter.com/yourusername)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/genie?style=social)](https://github.com/Alphamoris/IIIT-Hackathon.git)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/yourusername?style=social)](https://x.com/@_Alpha_45)
 
 </div>
