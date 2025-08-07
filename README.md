@@ -4,7 +4,8 @@
 
 ![Genie Banner](https://img.shields.io/badge/🧞‍♂️-Genie_Web3_Agent-purple?style=for-the-badge)
 [![ElizaOS](https://img.shields.io/badge/Built_with-ElizaOS-blue?style=for-the-badge)](https://github.com/elizaOS/eliza)
-[![Web3 MCP](https://img.shields.io/badge/Powered_by-Web3_MCP-green?style=for-the-badge)](https://github.com/strangelove-ventures/web3-mcp)
+[![Hedera](https://img.shields.io/badge/Integrated_with-Hedera-red?style=for-the-badge)](https://github.com/elizaOS/eliza)
+[![Comput#](https://img.shields.io/badge/Powered_by-Web3_MCP-green?style=for-the-badge)](https://comput3.ai/)
 
 **An intelligent Web3 agent built on ElizaOS that can interact with multiple blockchains**
 
