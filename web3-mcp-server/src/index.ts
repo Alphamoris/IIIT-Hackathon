@@ -31,7 +31,7 @@ import {
   registerBitcoinCashTools,
   registerCardanoTools,
 } from "./chains/UTXO/index.js";
-import { registerThorchainTools } from "./chains/thorchain/thorchain.js";
+
 import { registerRippleTools } from "./chains/ripple/ripple.js";
 import { registerTonTools } from "./chains/ton/ton.js";
 import { registerGeneralTools } from "./general/index.js";
@@ -85,10 +85,7 @@ if (isEnabled('ENABLE_CARDANO_TOOLS')) {
   registerCardanoTools(server);
 }
 
-if (isEnabled('ENABLE_THORCHAIN_TOOLS')) {
-  console.error('Registering THORChain tools...');
-  registerThorchainTools(server);
-}
+// THORChain tools removed for stability
 
 if (isEnabled('ENABLE_RIPPLE_TOOLS')) {
   console.error('Registering Ripple (XRP) tools...');
@@ -100,17 +97,35 @@ if (isEnabled('ENABLE_TON_TOOLS')) {
   registerTonTools(server);
 }
 
-// Register general tools
+// Register general tools with error handling
 console.error('Registering general tools...');
-registerGeneralTools(server);
+try {
+  console.error('About to call registerGeneralTools...');
+  registerGeneralTools(server);
+  console.error('Successfully registered general tools!');
+} catch (error) {
+  console.error('Error registering general tools:', error);
+  process.exit(1);
+}
+
+console.error('Starting main function...');
 
 async function main() {
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
+  try {
+    console.error('Creating StdioServerTransport...');
+    const transport = new StdioServerTransport();
+    console.error('Connecting server to transport...');
+    await server.connect(transport);
+    console.error('Server connected successfully!');
+  } catch (error) {
+    console.error('Error in main():', error);
+    throw error;
+  }
 }
 
 main().catch((err: unknown) => {
   const error = err as Error;
   console.error("Fatal error in main():", error.message);
+  console.error("Stack trace:", error.stack);
   process.exit(1);
 });

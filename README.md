@@ -1,271 +1,1210 @@
-# 🧞‍♂️ SolanaGenie - Universal Web3 DeFi Assistant
+# 🧞‍♂️ Genie - Your Web3 AI Agent
 
-[![Aya AI Hackathon](https://img.shields.io/badge/Aya%20AI-Hackathon%202025-blue)](https://aya.foundation)
-[![ElizaOS](https://img.shields.io/badge/Powered%20by-ElizaOS-purple)](https://eliza.how)
-[![Solana](https://img.shields.io/badge/Built%20for-Solana-green)](https://solana.com)
-[![DeFi](https://img.shields.io/badge/Category-DeFi-orange)](https://defillama.com)
+<div align="center">
 
-> **Revolutionary AI-powered DeFi assistant that makes blockchain interactions as simple as natural conversation**
+![Genie Banner](https://img.shields.io/badge/🧞‍♂️-Genie_Web3_Agent-purple?style=for-the-badge)
+[![ElizaOS](https://img.shields.io/badge/Built_with-ElizaOS-blue?style=for-the-badge)](https://github.com/elizaOS/eliza)
+[![Web3 MCP](https://img.shields.io/badge/Powered_by-Web3_MCP-green?style=for-the-badge)](https://github.com/strangelove-ventures/web3-mcp)
 
-## 🌟 Project Overview
+**An intelligent Web3 agent built on ElizaOS that can interact with multiple blockchains**
 
-SolanaGenie is an intelligent Web3 assistant built for the Aya AI Hackathon that transforms complex DeFi operations into simple conversational experiences. Users can execute token swaps, manage portfolios, accept crypto payments, and navigate multi-chain DeFi protocols through natural language interactions.
+[🚀 Quick Start](#-quick-start) • [📚 Features](#-features) • [🔧 Setup](#-setup) • [💡 Usage](#-usage) • [🤝 Contributing](#-contributing)
 
-### 🎯 What Makes SolanaGenie Special
+</div>
 
-- **Natural Language DeFi**: Execute complex blockchain operations through simple conversations
-- **Multi-Chain Support**: Seamlessly interact with Solana, Ethereum, Base, and Arbitrum
-- **Optimal Routing**: Jupiter aggregator integration ensures best prices and minimal slippage
-- **Universal Payments**: Accept crypto payments on any website with simple integration
-- **Enterprise Security**: Built on proven ElizaOS framework with enterprise-grade security
-- **AI-Powered Intelligence**: Comput3 AI infrastructure provides advanced reasoning capabilities
+## 📋 Project Information
 
-## ✨ Key Features
+**👨‍💻 Primary Contact:** Dhanush Kumar S | **📱 Telegram:** [@Alphamoris45](https://t.me/Alphamoris45)
 
-### 🚀 Core Capabilities
+**👥 Team:** Solo Developer
 
-| Feature | Description | Benefit |
-|---------|-------------|---------|
-| **Conversational DeFi** | Execute swaps, transfers, and DeFi operations through chat | No complex interfaces to learn |
-| **Multi-Chain Bridge** | Seamless asset transfers across Ethereum, Solana, Base, Arbitrum | One interface for all chains |
-| **Smart Routing** | Jupiter aggregator integration for optimal swap execution | Save up to 2% on every trade |
-| **Payment Integration** | Universal crypto payment hooks for websites | Accept any token, receive stablecoins |
-| **Portfolio Management** | Real-time balance tracking and portfolio analytics | Complete financial overview |
-| **Risk Assessment** | AI-powered security analysis and transaction validation | Protected from common mistakes |
+**🎯 Project Title:** Genie - Web3 AI Agent with Multi-Chain Integration
 
-### 💰 Financial Benefits
+**✨ One-Sentence Elevator Pitch:** 
+*Genie transforms complex blockchain interactions into natural conversations, enabling users to manage multi-chain Web3 operations through an intelligent AI agent that speaks your language, not code.*
 
-- **Cost Savings**: Up to 2% savings on swaps through optimal routing
-- **Time Efficiency**: 90% faster DeFi operations compared to manual interfaces
-- **Risk Reduction**: AI-powered transaction validation prevents costly mistakes
-- **Universal Access**: Accept payments in 100+ cryptocurrencies automatically
-- **Yield Optimization**: Intelligent suggestions for yield farming opportunities
+## 🌟 What is Genie?
 
-### 🛡️ Security & Trust
+Genie is an advanced AI agent built on the ElizaOS framework that brings the power of Web3 to conversational AI. Through the Web3 Model-Context-Protocol (MCP) server, Genie can seamlessly interact with multiple blockchain networks, perform transactions, check balances, and provide real-time Web3 insights - all through natural language conversations.
 
-- **Non-Custodial**: Your keys, your crypto - we never hold your funds
-- **Audited Framework**: Built on battle-tested ElizaOS infrastructure
-- **Transaction Transparency**: All operations viewable on blockchain explorers
-- **Risk Warnings**: Proactive alerts for high-risk transactions
-- **Best Practices**: Automatic security checks and validation
+### 🎯 Why Genie?
 
-## 🎮 How It Works
+- **🔗 Multi-Chain Support**: Native support for 10+ blockchain networks
+- **🤖 Conversational Interface**: Interact with blockchains using natural language  
+- **🔒 Secure by Design**: Private keys stored securely, never exposed in conversations
+- **⚡ Real-Time Data**: Live blockchain data and transaction capabilities
+- **🎮 Easy to Use**: No need to remember complex commands or addresses
+- **🔧 Highly Configurable**: Enable only the chains and features you need
 
-### 1. **Simple Conversations**
+## 🚀 Quick Start
+
+```bash
+# 1. Clone the repository
+git clone <your-repo-url>
+cd aya-hackathon-project
+
+# 2. Setup Web3 MCP Server
+cd web3-mcp-server
+npm install
+cp .env.example .env
+# Edit .env with your configuration
+npm run build
+
+# 3. Setup ElizaOS Agent
+cd ../elizaos-agent  
+npm install
+npm run build
+
+# 4. Start Genie
+npm exec elizaos start --character characters/genie.character.json
 ```
-You: "Swap 0.1 SOL to USDC"
-Genie: "I'll get you the best rate using Jupiter aggregator. 
-        Current rate: 1 SOL = $94.50 USDC
-        You'll receive ~$9.45 USDC
-        Proceed? (y/n)"
+
+🎉 **Genie is now running!** Open your browser to interact with your Web3 AI agent.
+
+## 📚 Features
+
+### 🟠 Solana Operations
+Genie provides comprehensive Solana blockchain integration:
+
+- **💰 Balance Checking**
+  - Check SOL balances for any address
+  - View detailed account information
+  - Monitor SPL token portfolios
+  - Real-time balance updates
+
+- **💸 Transaction Management**  
+  - Transfer SOL between accounts
+  - Send SPL tokens with ease
+  - View transaction history
+  - Transaction status monitoring
+
+- **🔄 DeFi Integration**
+  - Token swaps via Jupiter (best price routing)
+  - Access to all major Solana DEXs
+  - Slippage protection
+  - Route optimization
+
+- **👛 Wallet Management**
+  - Derive addresses from private keys
+  - Multi-wallet support
+  - Secure key management
+
+### 🔵 Ethereum & EVM Networks
+Support for the entire Ethereum ecosystem:
+
+#### Supported Networks:
+- **Ethereum** (Mainnet)
+- **Layer 2 Solutions**: Base, Arbitrum, Optimism, Polygon
+- **Alternative Networks**: BSC, Avalanche, Berachain
+
+#### Capabilities:
+- **💰 Native Token Operations**
+  - Check ETH/native token balances
+  - Send native tokens across networks
+  - Cross-chain balance monitoring
+  - Gas price optimization
+
+- **🪙 ERC-20 Token Management**
+  - Check token balances for any ERC-20
+  - Send tokens with proper decimal handling
+  - Token approval management
+  - Multi-token portfolio tracking
+
+- **⛽ Gas Management**
+  - Real-time gas price monitoring
+  - Network congestion analysis
+  - Optimal transaction timing
+
+### 🟡 Bitcoin & UTXO Chains
+Complete Bitcoin ecosystem support:
+
+#### Supported Chains:
+- **Bitcoin (BTC)** - The original cryptocurrency
+- **Litecoin (LTC)** - Silver to Bitcoin's gold
+- **Dogecoin (DOGE)** - The meme coin that became serious
+- **Bitcoin Cash (BCH)** - Bitcoin's big block fork
+
+#### Features:
+- **📊 Balance & History**
+  - Check address balances
+  - Comprehensive transaction history
+  - UTXO tracking and analysis
+  - Address validation
+
+- **📡 Network Information**
+  - Current network fees
+  - Block height and statistics
+  - Network difficulty
+  - Mempool analysis
+
+### 🔴 THORChain Integration
+Cross-chain DeFi made simple:
+
+- **💹 Pool Information**
+  - Detailed liquidity pool stats
+  - APY and rewards tracking
+  - Pool depth analysis
+  - Historical performance
+
+- **🔄 Cross-Chain Swaps**
+  - Native cross-chain swapping
+  - No wrapped tokens needed
+  - Optimal routing
+  - Slippage protection
+
+- **💰 RUNE Operations**
+  - RUNE balance checking
+  - Staking rewards tracking
+  - Validator information
+
+### 💎 XRP Ledger Support
+Enterprise-grade payment rails:
+
+- **💸 Payment Operations**
+  - Fast XRP transfers
+  - Multi-currency support
+  - Payment channels
+  - Escrow functionality
+
+- **🏦 Token Management**
+  - Issue and manage tokens
+  - Trustline management
+  - Currency exchange
+  - Gateway integration
+
+### ⚡ TON (The Open Network)
+Next-generation blockchain platform:
+
+- **🚀 High-Speed Operations**
+  - Lightning-fast transactions
+  - Minimal fees
+  - Sharding support
+  - Smart contract interaction
+
+- **💬 Messaging Integration**
+  - On-chain messaging
+  - Comment attachments
+  - Telegram integration
+  - Social payments
+
+### 🟣 Cardano Integration
+Research-driven blockchain platform:
+
+- **📊 Network Statistics**
+  - Epoch information
+  - Staking pool data
+  - Network health metrics
+  - Protocol parameters
+
+- **💰 Asset Management**
+  - ADA balance tracking
+  - Native asset support
+  - Multi-asset transactions
+  - UTXO model benefits
+
+## 🎮 Example Interactions
+
+### Natural Language Commands
+
+```
+🧞‍♂️ "What's my Solana balance?"
+🧞‍♂️ "Send 0.1 ETH to vitalik.eth"
+🧞‍♂️ "Swap 100 USDC to SOL using Jupiter"
+🧞‍♂️ "Check Bitcoin fees right now"
+🧞‍♂️ "Show me the best RUNE staking pools"
+🧞‍♂️ "What's the current gas price on Polygon?"
 ```
 
-### 2. **Smart Execution**
-- Automatically finds best swap routes across all Solana DEXs
-- Calculates optimal slippage tolerance
-- Executes transaction with minimal fees
+### Multi-Chain Operations
 
-### 3. **Instant Confirmation**
-- Real-time transaction status updates
-- Blockchain confirmation links
-- Updated portfolio balances
+```
+🧞‍♂️ "Compare my portfolio across Ethereum and Solana"
+🧞‍♂️ "Find the cheapest way to bridge USDC to Base"
+🧞‍♂️ "What are the transaction fees on all networks?"
+```
 
-## 🌐 Use Cases
+### DeFi Intelligence
 
-### For Individual Users
+```
+🧞‍♂️ "Find the best yield farming opportunities"
+🧞‍♂️ "What's the optimal slippage for this trade?"
+🧞‍♂️ "Show me arbitrage opportunities between DEXs"
+```
 
-#### **DeFi Trading**
-- **Token Swapping**: "Convert my USDC to SOL for the best price"
-- **Portfolio Rebalancing**: "Show my holdings and suggest optimal allocation"
-- **Yield Farming**: "Find the best staking rewards for my SOL"
+## 🏗️ Architecture
 
-#### **Payment Solutions**
-- **Receiving Payments**: "Help me accept crypto on my online store"
-- **Cross-Border Transfers**: "Send $500 to my friend in Europe"
-- **Subscription Management**: "Set up recurring crypto payments"
+Genie is built on a robust, modular architecture:
 
-### For Businesses
+```mermaid
+graph TB
+    User[👤 User] --> Genie[🧞‍♂️ Genie Agent]
+    Genie --> ElizaOS[🤖 ElizaOS Runtime]
+    ElizaOS --> MCP[🌐 Web3 MCP Server]
+    MCP --> Solana[☀️ Solana]
+    MCP --> Ethereum[🔵 Ethereum]
+    MCP --> Bitcoin[🟡 Bitcoin]
+    MCP --> THORChain[🔴 THORChain]
+    MCP --> XRP[💎 XRP Ledger]
+    MCP --> TON[⚡ TON]
+    MCP --> Cardano[🟣 Cardano]
+```
 
-#### **E-commerce Integration**
-- Accept any cryptocurrency, receive stable payments
-- Real-time conversion at point of sale
-- Automatic accounting and reconciliation
+### Core Components
 
-#### **DeFi Treasury Management**
-- Optimize corporate treasury yields
-- Multi-signature transaction coordination
-- Automated compliance reporting
+- **🤖 ElizaOS Runtime**: The AI agent framework providing natural language processing
+- **🌐 Web3 MCP Server**: Blockchain integration layer with secure key management
+- **🧞‍♂️ Genie Character**: Custom AI personality optimized for Web3 interactions
+- **🔐 Security Layer**: Encrypted private key storage and transaction signing
 
-### For Developers
 
-#### **Payment Infrastructure**
-- Simple webhook integration
-- RESTful API for custom implementations
-- Real-time payment status updates
+## 🔧 Installation & Setup
 
-## 🏆 Competitive Advantages
+### 📋 Prerequisites
 
-### vs Traditional DeFi Interfaces
-| Traditional DEX | SolanaGenie |
-|----------------|-------------|
-| 🔧 Complex UI learning curve | 💬 Natural conversation |
-| 📊 Manual route comparison | 🤖 AI-optimized routing |
-| ⚠️ No risk assessment | 🛡️ Built-in security analysis |
-| 🔄 Single-chain limitation | 🌐 Multi-chain support |
+Before setting up Genie, ensure you have the following installed:
 
-### vs Other AI Assistants
-| Generic AI | SolanaGenie |
-|------------|-------------|
-| 💭 Text-only responses | ⚡ Real blockchain execution |
-| 📚 General knowledge | 🎯 DeFi-specialized expertise |
-| 🚫 No transaction capability | 💰 Direct wallet integration |
-| 🔍 Information lookup only | 🔄 End-to-end operation completion |
+- **Node.js** v20+ ([Download](https://nodejs.org/))
+- **npm** or **bun** package manager
+- **Git** for version control
+- **A modern web browser** for the interface
 
-## 🚀 Getting Started
+### 🚀 Step-by-Step Installation
 
-### Quick Start (5 Minutes)
+#### 1. Clone the Repository
 
-1. **Setup Your Environment**
+```bash
+git clone <your-repository-url>
+cd aya-hackathon-project
+```
+
+#### 2. Install Dependencies
+
+```bash
+# Install root dependencies
+npm install
+
+# Install Web3 MCP Server dependencies
+cd web3-mcp-server
+npm install
+cd ..
+
+# Install ElizaOS Agent dependencies  
+cd elizaos-agent
+npm install
+cd ..
+```
+
+#### 3. Setup Web3 MCP Server
+
+```bash
+cd web3-mcp-server
+
+# Copy environment template
+cp .env.example .env
+
+# Edit your environment variables (see configuration section below)
+nano .env  # or your preferred editor
+
+# Build the MCP server
+npm run build
+```
+
+#### 4. Setup ElizaOS Agent
+
+```bash
+cd ../elizaos-agent
+
+# The agent should already be configured with Genie character
+# Build the agent
+npm run build
+```
+
+## ⚙️ Configuration
+
+### 🌐 Web3 MCP Server Configuration
+
+Edit the `.env` file in the `web3-mcp-server` directory with your blockchain credentials and preferences.
+
+#### 🔐 Security Configuration
+
+```env
+# ============================================
+# SECURITY & PRIVATE KEYS (REQUIRED)
+# ============================================
+
+# Ethereum & EVM Networks
+ETH_PRIVATE_KEY=your-ethereum-private-key-without-0x-prefix
+
+# Solana Network  
+SOLANA_PRIVATE_KEY=your-base58-encoded-solana-private-key
+
+# XRP Ledger (Choose one method)
+XRP_PRIVATE_KEY=your-xrp-private-key-in-hex
+# OR
+XRP_MNEMONIC=your-xrp-mnemonic-recovery-phrase
+XRP_ADDRESS=your-xrp-account-address  # Optional verification
+
+# TON Network
+TON_MNEMONIC=word1 word2 word3 ... word24  # 24-word recovery phrase
+TON_ADDRESS=your-ton-wallet-address
+
+# Cardano Network
+CARDANO_MNEMONIC=your-cardano-mnemonic-phrase  # 15 or 24 words
+CARDANO_ACCOUNT_INDEX=0  # Optional, defaults to 0
+
+# THORChain
+THORCHAIN_PRIVATE_KEY=your-thorchain-private-key
+# OR
+THORCHAIN_MNEMONIC=your-thorchain-mnemonic
+```
+
+#### 🛡️ Tool Registration Controls
+
+Enable only the blockchain tools you need for enhanced security:
+
+```env
+# ============================================
+# BLOCKCHAIN TOOL CONTROLS
+# ============================================
+
+ENABLE_SOLANA_TOOLS=true       # Solana operations
+ENABLE_EVM_TOOLS=true          # Ethereum & EVM chains  
+ENABLE_BITCOIN_TOOLS=true      # Bitcoin operations
+ENABLE_LITECOIN_TOOLS=true     # Litecoin operations
+ENABLE_DOGECOIN_TOOLS=true     # Dogecoin operations
+ENABLE_BITCOINCASH_TOOLS=true  # Bitcoin Cash operations
+ENABLE_THORCHAIN_TOOLS=true    # THORChain operations
+ENABLE_RIPPLE_TOOLS=true       # XRP Ledger operations
+ENABLE_CARDANO_TOOLS=true      # Cardano operations
+ENABLE_TON_TOOLS=true          # TON operations
+```
+
+#### 🌍 Network RPC Endpoints
+
+Configure custom RPC endpoints for better performance and reliability:
+
+```env
+# ============================================
+# NETWORK RPC ENDPOINTS (OPTIONAL)
+# ============================================
+
+# Solana
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+
+# Ethereum & Layer 2s
+ETH_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/your-api-key
+ARBITRUM_RPC_URL=https://arb1.arbitrum.io/rpc  
+BASE_RPC_URL=https://mainnet.base.org
+OPTIMISM_RPC_URL=https://mainnet.optimism.io
+
+# Other EVM Networks
+BSC_RPC_URL=https://bsc-dataseed.binance.org
+POLYGON_RPC_URL=https://polygon-rpc.com
+AVALANCHE_RPC_URL=https://api.avax.network/ext/bc/C/rpc
+BERACHAIN_RPC_URL=https://rpc.berachain.com
+
+# XRP Ledger
+XRP_RPC_URL=https://xrplcluster.com/
+
+# TON Network
+TON_RPC_URL=https://toncenter.com/api/v2/jsonRPC
+TON_API_KEY=your-toncenter-api-key  # Get from @tonapibot on Telegram
+
+# THORChain
+THORCHAIN_NODE_URL=https://thornode.ninerealms.com
+```
+
+#### 🔑 API Keys & External Services
+
+```env
+# ============================================
+# EXTERNAL SERVICE API KEYS (OPTIONAL)
+# ============================================
+
+# Cardano (Required for Cardano operations)
+BLOCKFROST_API_KEY=your-blockfrost-api-key  # Get from https://blockfrost.io/
+CARDANO_NETWORK=mainnet  # mainnet, testnet, preview, preprod
+
+# TON Network (Recommended for higher rate limits)
+TON_API_KEY=your-toncenter-api-key  # Get from @tonapibot on Telegram
+
+# UTXO Chain Data Providers (Optional - for better rate limits)
+BLOCKCYPHER_API_KEY=your-blockcypher-api-key
+SOCHAIN_API_KEY=your-sochain-api-key
+
+# Price Data & Market Info
+COINGECKO_API_KEY=your-coingecko-api-key  # Optional, for enhanced price data
+```
+
+### 🤖 ElizaOS Agent Configuration
+
+The Genie character is pre-configured in `elizaos-agent/characters/genie.character.json`. You can customize:
+
+#### Basic Settings
+
+```json
+{
+  "name": "Genie",
+  "bio": "A helpful Web3 AI assistant that can interact with multiple blockchains...",
+  "description": "Your personal Web3 genie that grants wishes through blockchain magic"
+}
+```
+
+#### Model Configuration
+
+```json
+{
+  "settings": {
+    "model": "gpt-4",
+    "temperature": 0.7,
+    "maxTokens": 2000
+  }
+}
+```
+
+## 🚦 Starting Genie
+
+### Option 1: Start Everything at Once
+
+```bash
+# From the project root
+./start-genie.sh
+```
+
+### Option 2: Start Components Separately
+
+#### Terminal 1: Start Web3 MCP Server
+```bash
+cd web3-mcp-server
+node build/index.js
+```
+
+You should see:
+```
+✅ Solana tools registered
+✅ EVM tools registered  
+✅ Bitcoin tools registered
+🚀 Web3 MCP Server listening...
+```
+
+#### Terminal 2: Start Genie Agent
+```bash
+cd elizaos-agent
+npm exec elizaos start --character characters/genie.character.json
+```
+
+You should see:
+```
+🧞‍♂️ Genie agent starting...
+✅ Web3 MCP connection established
+🌍 Agent server listening on http://localhost:3000
+```
+
+## 🔍 Verification
+
+### Test Web3 MCP Connection
+
+```bash
+# Test MCP server directly
+cd web3-mcp-server
+echo '{"method": "getMyAddress", "params": {}}' | node build/index.js
+```
+
+### Test Genie Agent
+
+1. Open your browser to `http://localhost:3000`
+2. Try a simple command: "What's my Solana address?"
+3. Genie should respond with your wallet address
+
+### Health Check Commands
+
+```bash
+# Check if all services are running
+ps aux | grep -E "(genie|mcp|elizaos)"
+
+# Check port usage
+netstat -tlnp | grep -E "(3000|8080)"
+
+# View logs
+tail -f elizaos-agent/logs/genie.log
+tail -f web3-mcp-server/logs/mcp.log
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues & Solutions
+
+#### 🔴 "MCP Connection Failed"
+
+**Problem**: Genie can't connect to the Web3 MCP server.
+
+**Solutions**:
+```bash
+# 1. Check if MCP server is running
+cd web3-mcp-server && node build/index.js
+
+# 2. Verify environment variables
+grep -v "^#" .env | grep -v "^$"
+
+# 3. Check for port conflicts
+lsof -i :8080
+```
+
+#### 🔴 "Private Key Invalid" 
+
+**Problem**: Blockchain operations fail due to invalid private keys.
+
+**Solutions**:
+```bash
+# 1. Verify private key format
+# Ethereum: Remove 0x prefix
+# Solana: Use base58 encoding
+# XRP: Use hex format
+
+# 2. Test key derivation
+cd web3-mcp-server
+node -e "console.log(require('./build/utils/wallet').deriveAddress())"
+```
+
+#### 🔴 "Agent Not Responding"
+
+**Problem**: Genie doesn't respond to commands.
+
+**Solutions**:
+```bash
+# 1. Check ElizaOS logs
+cd elizaos-agent
+tail -f logs/debug.log
+
+# 2. Restart with verbose logging
+DEBUG=* npm exec elizaos start --character characters/genie.character.json
+
+# 3. Verify character configuration
+jq . characters/genie.character.json
+```
+
+#### 🔴 "Network Connection Timeout"
+
+**Problem**: Blockchain RPC calls timeout.
+
+**Solutions**:
+```env
+# 1. Configure custom RPC endpoints in .env
+ETH_RPC_URL=https://your-reliable-endpoint.com
+
+# 2. Increase timeout values
+NETWORK_TIMEOUT=30000
+
+# 3. Use premium RPC providers
+# Alchemy, Infura, QuickNode, etc.
+```
+
+### 📊 Debug Mode
+
+Enable comprehensive debugging:
+
+```bash
+# Start MCP server with debug logs
+cd web3-mcp-server
+DEBUG=mcp:* node build/index.js
+
+# Start Genie with debug logs  
+cd elizaos-agent
+DEBUG=elizaos:* npm exec elizaos start --character characters/genie.character.json
+```
+
+### 🔧 Configuration Validation
+
+```bash
+# Validate all configurations
+cd web3-mcp-server
+npm run validate-config
+
+cd ../elizaos-agent
+npm run validate-character
+```
+
+## 🔄 Updates & Maintenance
+
+### Regular Updates
+
+```bash
+# Update dependencies
+npm update
+
+# Rebuild components
+cd web3-mcp-server && npm run build
+cd ../elizaos-agent && npm run build
+```
+
+### Database Maintenance
+
+```bash
+# Clean ElizaOS database
+cd elizaos-agent
+rm -rf .elizadb/
+npm exec elizaos start  # Will recreate database
+```
+
+### Log Rotation
+
+```bash
+# Archive old logs
+cd elizaos-agent/logs
+tar -czf archive-$(date +%Y%m%d).tar.gz *.log
+rm *.log
+```
+
+## 💡 Usage Examples
+
+### 🌟 Basic Commands
+
+#### Wallet & Balance Queries
+```
+🧞‍♂️ User: "What's my Solana address?"
+🤖 Genie: "Your Solana address is: 7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgHkk"
+
+🧞‍♂️ User: "Check my ETH balance"  
+🤖 Genie: "Your Ethereum balance is 2.547 ETH ($4,892.33 USD)"
+
+🧞‍♂️ User: "Show me my portfolio across all chains"
+🤖 Genie: "📊 Multi-Chain Portfolio:
+• Ethereum: 2.547 ETH + 1,000 USDC  
+• Solana: 45.2 SOL + 500 USDT
+• Bitcoin: 0.1234 BTC
+• Total Value: $8,934.56"
+```
+
+#### Transaction Operations
+```
+🧞‍♂️ User: "Send 0.1 SOL to Alice's wallet"
+🤖 Genie: "Sending 0.1 SOL to 9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM...
+✅ Transaction successful! 
+TxID: 3Kx7s9...Mn2 
+Fee: 0.000005 SOL"
+
+🧞‍♂️ User: "Swap 100 USDC to SOL"
+🤖 Genie: "Finding best route via Jupiter...
+🔄 Route: USDC → SOL (via Orca + Raydium)
+💰 You'll receive: ~2.34 SOL  
+⛽ Fee: 0.25 USDC
+Proceed? (yes/no)"
+```
+
+### 🔍 Advanced Queries
+
+#### Market Analysis
+```
+🧞‍♂️ User: "What are the current gas prices across all EVM networks?"
+🤖 Genie: "⛽ Current Gas Prices:
+• Ethereum: 45 gwei (~$2.10)
+• Arbitrum: 0.1 gwei (~$0.02) 
+• Polygon: 30 gwei (~$0.01)
+• Base: 0.05 gwei (~$0.01)
+💡 Recommendation: Use Arbitrum or Base for lower fees!"
+
+🧞‍♂️ User: "Compare Bitcoin transaction fees with other chains"
+🤖 Genie: "🔍 Fee Comparison (for $100 transfer):
+• Bitcoin: $3.50 (High traffic)
+• Litecoin: $0.05  
+• Dogecoin: $0.02
+• Lightning Network: $0.001
+⚡ Lightning recommended for small amounts!"
+```
+
+#### DeFi Operations  
+```
+🧞‍♂️ User: "Find me the best yield farming opportunities on Solana"
+🤖 Genie: "🌾 Top Solana Yield Opportunities:
+1. Marinade stSOL: 7.2% APY (Low risk)
+2. Orca USDC-SOL: 12.4% APY (Medium risk)
+3. Raydium RAY-USDC: 18.7% APY (High risk)
+💡 Consider your risk tolerance and impermanent loss!"
+
+🧞‍♂️ User: "What's the best way to bridge USDC from Ethereum to Polygon?"
+🤖 Genie: "🌉 Bridge Options for USDC (ETH → Polygon):
+1. Polygon Bridge: 0.1% fee, 7-8 min
+2. Hop Protocol: 0.04% fee, ~2 min
+3. Stargate: 0.06% fee, ~1 min
+✅ Recommended: Stargate (fastest, reasonable fees)"
+```
+
+### 🎯 Chain-Specific Commands
+
+#### Solana Ecosystem
+```
+🧞‍♂️ User: "Check my SPL token balances"
+🤖 Genie: "🪙 Your SPL Tokens:
+• USDC: 1,500.00 ($1,500.00)
+• USDT: 750.25 ($750.25)  
+• RAY: 234.5 ($89.12)
+• BONK: 1,000,000 ($12.34)
+Total SPL Value: $2,351.71"
+
+🧞‍♂️ User: "Swap 50 USDC to BONK with 1% slippage"
+🤖 Genie: "🔄 Jupiter Swap Preview:
+• Input: 50 USDC
+• Output: ~4,045,643 BONK
+• Route: USDC → SOL → BONK (via Orca)
+• Price Impact: 0.12%
+• Slippage: 1%
+Executing swap..."
+```
+
+#### Ethereum & Layer 2s
+```
+🧞‍♂️ User: "Check USDC balance on all EVM chains"
+🤖 Genie: "💰 USDC Balances Across Networks:
+• Ethereum: 1,000.00 USDC
+• Arbitrum: 750.50 USDC
+• Polygon: 500.25 USDC  
+• Base: 250.00 USDC
+• Optimism: 100.75 USDC
+📊 Total: 2,601.50 USDC"
+
+🧞‍♂️ User: "Send 100 USDC from Arbitrum to Polygon"  
+🤖 Genie: "This requires bridging across networks.
+🌉 Best route: Arbitrum → Polygon via Stargate
+• Fee: ~0.06 USDC + gas
+• Time: ~2 minutes
+• You'll receive: ~99.94 USDC
+Proceed with bridge?"
+```
+
+#### Bitcoin & UTXO Chains
+```
+🧞‍♂️ User: "What's the current Bitcoin mempool status?"
+🤖 Genie: "⛏️ Bitcoin Network Status:
+• Mempool Size: 45,231 transactions
+• Next Block Fee: 28 sat/vB (~$3.20)  
+• Low Priority: 15 sat/vB (~$1.75)
+• Network Congestion: Moderate
+⏰ Low priority tx will likely confirm in 2-4 blocks"
+
+🧞‍♂️ User: "Compare Litecoin vs Bitcoin Cash for payments"
+🤖 Genie: "💳 Payment Comparison:
+Litecoin:
+• Fee: ~$0.05
+• Confirmation: 2.5 min/block
+• TPS: ~56
+
+Bitcoin Cash:  
+• Fee: ~$0.01
+• Confirmation: 10 min/block
+• TPS: ~116
+🏆 BCH wins for low fees, LTC for faster confirmation"
+```
+
+#### THORChain DeFi
+```
+🧞‍♂️ User: "Show me THORChain pool stats for BTC"
+🤖 Genie: "🏊‍♂️ BTC.BTC Pool Stats:
+• TVL: $145.2M
+• APY: 12.4%
+• Volume (24h): $5.8M
+• Slip: 0.85%
+• Pool Status: Available
+💡 Good time to provide liquidity!"
+
+🧞‍♂️ User: "Get a quote to swap 0.1 BTC to ETH via THORChain"
+🤖 Genie: "🔄 THORChain Swap Quote:
+• Input: 0.1 BTC (~$4,300)
+• Output: ~1.85 ETH  
+• Fee: ~0.3% (~$12.90)
+• Slip: 0.15%
+• Time: ~5-10 minutes
+Cross-chain magic at work! ✨"
+```
+
+## ⚙️ Advanced Configuration
+
+### 🔧 Custom Model Integration
+
+#### OpenAI Configuration
+```json
+{
+  "settings": {
+    "secrets": {
+      "OPENAI_API_KEY": "your-openai-key"
+    },
+    "model": "gpt-4-turbo",
+    "temperature": 0.7,
+    "maxTokens": 3000
+  }
+}
+```
+
+#### Anthropic Claude Integration
+```json
+{
+  "settings": {
+    "secrets": {
+      "ANTHROPIC_API_KEY": "your-anthropic-key"  
+    },
+    "model": "claude-3-opus",
+    "temperature": 0.6,
+    "maxTokens": 4000
+  }
+}
+```
+
+#### Local Model Support
+```json
+{
+  "settings": {
+    "model": "local",
+    "modelEndpoint": "http://localhost:11434/v1",
+    "modelName": "llama2:70b"
+  }
+}
+```
+
+### 🎨 Personality Customization
+
+#### Modify Genie's Personality
+Edit `elizaos-agent/characters/genie.character.json`:
+
+```json
+{
+  "name": "Genie",
+  "bio": "Your wish is my command! I'm a magical Web3 assistant...",
+  "style": {
+    "all": [
+      "Use crypto and Web3 terminology naturally",
+      "Be enthusiastic about blockchain technology", 
+      "Provide clear explanations for complex concepts",
+      "Always prioritize user security and best practices"
+    ],
+    "chat": [
+      "Use emojis to make responses more engaging",
+      "Reference current market conditions when relevant",
+      "Suggest gas-efficient alternatives when possible"
+    ]
+  },
+  "adjectives": [
+    "helpful",
+    "knowledgeable", 
+    "security-conscious",
+    "enthusiastic",
+    "magical"
+  ]
+}
+```
+
+### 🔐 Enhanced Security Settings
+
+#### Multi-Signature Support
+```env
+# Enable multi-sig for high-value transactions
+ENABLE_MULTISIG=true
+MULTISIG_THRESHOLD=2
+MULTISIG_OWNERS=address1,address2,address3
+```
+
+#### Hardware Wallet Integration
+```env
+# Ledger support
+ENABLE_LEDGER=true
+LEDGER_DERIVATION_PATH="m/44'/60'/0'/0/0"
+
+# Trezor support  
+ENABLE_TREZOR=true
+TREZOR_DERIVATION_PATH="m/44'/60'/0'/0/0"
+```
+
+#### Transaction Limits
+```env
+# Daily transaction limits (USD)
+DAILY_LIMIT_SOLANA=1000
+DAILY_LIMIT_ETHEREUM=5000  
+DAILY_LIMIT_BITCOIN=2000
+
+# Require confirmation for large transactions
+CONFIRMATION_THRESHOLD=100
+```
+
+### 🌐 Network Optimization
+
+#### Custom RPC Configuration
+```env
+# Premium RPC endpoints for better performance
+ETH_RPC_URL=https://eth-mainnet.alchemyapi.io/v2/your-key
+ETH_RPC_URL_BACKUP=https://mainnet.infura.io/v3/your-key
+
+# Load balancing
+ENABLE_RPC_LOAD_BALANCING=true
+RPC_RETRY_ATTEMPTS=3
+RPC_TIMEOUT=10000
+```
+
+#### Caching Configuration  
+```env
+# Redis caching for better performance
+REDIS_URL=redis://localhost:6379
+CACHE_TTL=300
+
+# Local caching
+ENABLE_LOCAL_CACHE=true
+LOCAL_CACHE_SIZE=1000
+```
+
+## 📊 Monitoring & Analytics
+
+### 📈 Performance Monitoring
+
+#### Built-in Metrics
+```bash
+# View Genie performance stats
+curl http://localhost:3000/api/metrics
+
+# Web3 MCP server health check
+curl http://localhost:8080/health
+```
+
+#### Custom Dashboards
+```bash
+# Install monitoring stack
+docker-compose -f monitoring/docker-compose.yml up -d
+
+# Access Grafana dashboard
+open http://localhost:3001
+```
+
+### 📋 Logging Configuration
+
+#### Enable Detailed Logging
+```env
+# Genie agent logs
+LOG_LEVEL=debug
+LOG_FILE=logs/genie.log
+LOG_ROTATION=daily
+
+# Web3 MCP logs
+MCP_LOG_LEVEL=info
+MCP_LOG_FILE=logs/mcp.log
+```
+
+#### Log Analysis
+```bash
+# Search for specific transactions
+grep "0x..." logs/genie.log
+
+# Monitor error rates
+grep -c "ERROR" logs/*.log
+
+# Real-time log monitoring
+tail -f logs/genie.log | grep -E "(swap|transfer|balance)"
+```
+
+## 🔌 Plugin Development
+
+### 🛠️ Creating Custom Plugins
+
+#### Basic Plugin Structure
+```typescript
+// plugins/custom-defi-plugin.ts
+import { Plugin, Action } from '@elizaos/core';
+
+export const customDefiPlugin: Plugin = {
+  name: 'custom-defi',
+  description: 'Custom DeFi operations',
+  actions: [
+    {
+      name: 'YIELD_FARMING',
+      description: 'Find best yield farming opportunities',
+      handler: async (runtime, message) => {
+        // Your custom logic here
+      }
+    }
+  ]
+};
+```
+
+#### Advanced Plugin Features
+```typescript
+// Advanced plugin with providers and evaluators
+export const advancedPlugin: Plugin = {
+  name: 'advanced-plugin',
+  actions: [...],
+  providers: [
+    {
+      name: 'market-data',
+      get: async (runtime) => {
+        // Provide real-time market data
+      }
+    }
+  ],
+  evaluators: [
+    {
+      name: 'risk-assessment', 
+      handler: async (runtime, message) => {
+        // Evaluate transaction risk
+      }
+    }
+  ]
+};
+```
+
+## ⚠️ Known Issues
+
+### Current Limitations
+
+#### 🔄 **Transaction Processing**
+- **Issue**: Large batch transactions may timeout on congested networks
+- **Workaround**: Use smaller batch sizes during peak network hours
+- **Status**: Planning optimization in v2.0
+
+#### 🌐 **Network Connectivity** 
+- **Issue**: Occasional RPC endpoint failures during high traffic
+- **Workaround**: Configure multiple backup RPC URLs in your `.env`
+- **Status**: Automatic failover being developed
+
+#### 💰 **Price Data Accuracy**
+- **Issue**: Price quotes may lag during extreme market volatility
+- **Workaround**: Always verify prices before large transactions
+- **Status**: Implementing real-time price feeds
+
+#### 🔐 **Hardware Wallet Support**
+- **Issue**: Limited hardware wallet integration (Ledger/Trezor)
+- **Workaround**: Use software wallets for now
+- **Status**: Full hardware wallet support planned for v2.1
+
+#### 🏗️ **Database Migration**
+- **Issue**: Rare database lock issues during high concurrent usage
+- **Workaround**: Restart agent if experiencing lock timeouts
+- **Status**: Implementing connection pooling
+
+### Reporting Issues
+
+Found a bug not listed here? Please help us improve:
+
+1. **Search existing issues** in our GitHub repository
+2. **Provide detailed reproduction steps**
+3. **Include environment details** (OS, Node version, etc.)
+4. **Share relevant log excerpts** (remove sensitive data)
+
+**Quick Bug Report Template:**
+```
+**Environment**: OS, Node.js version, npm version
+**Steps to Reproduce**: 1. 2. 3.
+**Expected Behavior**: What should happen
+**Actual Behavior**: What actually happens  
+**Logs**: Relevant log excerpts (sanitized)
+```
+
+## 🤝 Contributing
+
+### 🐛 Bug Reports
+
+Found a bug? Help us improve Genie!
+
+1. **Check existing issues** on GitHub
+2. **Create a detailed bug report** with:
+   - Steps to reproduce
+   - Expected vs actual behavior  
+   - Environment details
+   - Log excerpts
+
+### 💡 Feature Requests
+
+Have an idea for a new feature?
+
+1. **Search existing feature requests**
+2. **Create a detailed proposal** including:
+   - Use case description
+   - Implementation approach
+   - Potential impact
+
+### 🔧 Development Setup
+
+#### Fork & Clone
+```bash
+# Fork the repository on GitHub
+git clone https://github.com/yourusername/genie.git
+cd genie
+```
+
+#### Development Environment
+```bash
+# Install development dependencies
+npm install --include=dev
+
+# Setup pre-commit hooks
+npm run setup-hooks
+
+# Run tests
+npm test
+```
+
+#### Code Style
+```bash
+# Format code
+npm run format
+
+# Lint code
+npm run lint
+
+# Type check
+npm run type-check
+```
+
+### 📝 Pull Request Process
+
+1. **Create a feature branch**
    ```bash
-   git clone <repository>
-   cd aya-hackathon-project
-   chmod +x START-AGENT.sh
+   git checkout -b feature/your-feature-name
    ```
 
-2. **Configure Your Wallets**
+2. **Make your changes**
+   - Follow existing code style
+   - Add tests for new features  
+   - Update documentation
+
+3. **Test thoroughly**
    ```bash
-   node generate-test-keys.js
-   # Follow the instructions to fund test wallets
+   npm run test:full
+   npm run integration-test
    ```
 
-3. **Launch SolanaGenie**
-   ```bash
-   ./START-AGENT.sh
-   ```
+4. **Submit pull request**
+   - Clear description of changes
+   - Link to related issues
+   - Add screenshots if UI changes
 
-4. **Start Trading**
-   ```
-   💬 "What can you help me with?"
-   💬 "Show me my wallet balance"
-   💬 "Swap 0.1 SOL to USDC"
-   ```
+## 📄 License
 
-### Integration Examples
+This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) file for details.
 
-#### Website Payment Integration
-```html
-<script src="https://solanagenie.com/payment-hook.js"></script>
-<button onclick="acceptCrypto('$49.99', 'USD')">
-  Pay with Crypto
-</button>
-```
+## 🙏 Acknowledgments
 
-#### API Integration
-```javascript
-const payment = await solanaGenie.createPayment({
-  amount: 49.99,
-  currency: 'USD',
-  acceptedTokens: ['SOL', 'USDC', 'ETH'],
-  webhook: 'https://yoursite.com/webhook'
-});
-```
+- **ElizaOS Team** - For the amazing AI agent framework
+- **Web3 MCP Contributors** - For blockchain integration capabilities  
+- **Blockchain Communities** - For continued innovation and support
+- **Open Source Contributors** - Making Web3 accessible to everyone
 
-## 📊 Performance Metrics
+## 📞 Support
 
-### Speed & Efficiency
-- **Transaction Speed**: Average 2.3 seconds for Solana swaps
-- **Route Optimization**: 89% better pricing than manual selection
-- **Success Rate**: 99.7% transaction success rate
-- **Slippage Reduction**: Average 0.8% savings per swap
+### 🆘 Getting Help
 
-### User Experience
-- **Learning Curve**: 95% of users successful within 2 minutes
-- **Error Rate**: 0.3% user error rate vs 12% manual DEX usage
-- **Satisfaction**: 4.8/5 user satisfaction rating
-- **Retention**: 78% weekly active user retention
+- **Documentation**: Check this README and inline code comments
+- **GitHub Issues**: Report bugs and request features
+- **Community Discord**: Join our developer community
+- **Stack Overflow**: Tag questions with `genie-web3`
 
-## 🛠️ Technical Stack
+### 🔗 Useful Links
 
-### Core Infrastructure
-- **Framework**: ElizaOS v2 (Enterprise AI Agent Platform)
-- **AI Engine**: Comput3 AI with Llama 3 70B model
-- **Blockchain**: Solana (primary), Ethereum, Base, Arbitrum
-- **DEX Integration**: Jupiter Aggregator for optimal routing
-
-### Key Integrations
-- **Model Context Protocol (MCP)**: Standardized blockchain interaction layer
-- **Web3 RPC**: Multi-chain RPC interface for real-time data
-- **Payment Processors**: Universal crypto payment acceptance
-- **Security Audits**: Continuous smart contract validation
-
-## 🌟 Future Roadmap
-
-### Phase 1: Enhanced DeFi (Q2 2025)
-- [ ] Advanced yield farming strategies
-- [ ] Automated portfolio rebalancing
-- [ ] DeFi protocol governance participation
-- [ ] Advanced risk assessment models
-
-### Phase 2: Cross-Chain Expansion (Q3 2025)
-- [ ] Polygon and Avalanche support
-- [ ] Cross-chain arbitrage opportunities
-- [ ] Multi-chain yield optimization
-- [ ] Unified cross-chain portfolio view
-
-### Phase 3: Enterprise Features (Q4 2025)
-- [ ] Multi-signature wallet management
-- [ ] Enterprise treasury automation
-- [ ] Compliance reporting tools
-- [ ] Custom business logic integration
-
-## 🤝 Community & Support
-
-### Get Help
-- 📚 **Documentation**: [Complete guides and tutorials](./TECHNICAL-README.md)
-- 💬 **Discord**: Join our community for support and updates
-- 🐛 **Issues**: Report bugs and request features on GitHub
-- 📧 **Contact**: support@solanagenie.com
-
-### Contribute
-- 🔧 **Development**: Check our contribution guidelines
-- 🎨 **Design**: Help improve user experience
-- 📝 **Documentation**: Improve guides and tutorials
-- 🧪 **Testing**: Join our beta testing program
-
-## 📄 License & Legal
-
-### Open Source License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### Security Audits
-- ElizaOS Framework: Audited by leading security firms
-- Smart Contracts: Continuous monitoring and validation
-- API Security: Regular penetration testing
-
-### Compliance
-- GDPR compliant data handling
-- SOC 2 Type II security standards
-- Financial regulations compliance ready
-
-## 🎉 Acknowledgments
-
-### Built For
-- **Aya AI Hackathon 2025**: Revolutionizing AI agent interactions
-- **Solana Ecosystem**: Advancing DeFi accessibility and adoption
-- **Web3 Community**: Making blockchain technology universally accessible
-
-### Powered By
-- **ElizaOS**: Enterprise-grade AI agent framework
-- **Comput3 AI**: Advanced language model infrastructure
-- **Jupiter Protocol**: Solana's premier DEX aggregator
-- **Model Context Protocol**: Standardized AI-blockchain interface
+- [ElizaOS Documentation](https://docs.eliza.org)
+- [Web3 MCP Server](https://github.com/strangelove-ventures/web3-mcp)
+- [Blockchain Developer Resources](https://ethereum.org/developers)
+- [Solana Developer Docs](https://docs.solana.com)
 
 ---
 
-**Ready to experience the future of DeFi?** 
+<div align="center">
 
-🚀 **[Get Started Now](#-getting-started)** | 📚 **[View Technical Docs](./TECHNICAL-README.md)** | 💬 **[Join Community](https://discord.gg/solanagenie)**
+**🧞‍♂️ Your wish is Genie's command! Start building the future of Web3 AI today.**
 
----
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/genie?style=social)](https://github.com/yourusername/genie/stargazers)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/yourusername?style=social)](https://twitter.com/yourusername)
 
-*SolanaGenie - Making DeFi as easy as asking a question* 🧞‍♂️✨
+</div>

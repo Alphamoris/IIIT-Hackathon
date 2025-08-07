@@ -120,8 +120,6 @@
     "@fleek-platform/eliza-plugin-mcp"
   ],
 
-  "modelProvider": "openai",
-
   "settings": {
     "mcp": {
       "servers": {
@@ -157,7 +155,7 @@
       "model": "en_US-hfc_female-medium"
     },
     "secrets": {
-      "OPENAI_API_KEY": "c3_api_Mn0tzOhZSQtu1egGZmlozkDv",
+      "OPENAI_API_KEY": "c3_api_RuFplx7EGCRv9JeJGnI4gIEq",
       "OPENAI_API_URL": "https://api.comput3.ai/v1",
       "SMALL_OPENAI_MODEL": "llama3:70b",
       "MEDIUM_OPENAI_MODEL": "llama3:70b", 

@@ -217,6 +217,44 @@ const baseCharacter: Character = {
 };
 
 /**
+ * Helper function to validate that a token is not a placeholder value
+ */
+function isValidToken(token: string | undefined): boolean {
+  if (!token?.trim()) return false;
+  
+  // Common placeholder patterns to exclude
+  const placeholders = [
+    'your_',
+    'YOUR_',
+    'sk-',
+    'demo-',
+    'test-',
+    'sample-',
+    'example-',
+    'placeholder',
+    'PLACEHOLDER',
+    'xxx',
+    'XXX',
+    '***',
+    'null',
+    'undefined',
+    'change-me',
+    'CHANGE-ME',
+  ];
+  
+  const lowerToken = token.toLowerCase();
+  
+  // Check if token is too short (likely invalid)
+  if (token.length < 10) return false;
+  
+  // Check for common placeholder patterns
+  return !placeholders.some(placeholder => 
+    lowerToken.includes(placeholder.toLowerCase()) || 
+    token === placeholder
+  );
+}
+
+/**
  * Returns the Eliza character with plugins ordered by priority based on environment variables.
  * This should be called after environment variables are loaded.
  *
@@ -228,31 +266,31 @@ export function getElizaCharacter(): Character {
     '@elizaos/plugin-sql',
 
     // Text-only plugins (no embedding support)
-    ...(process.env.ANTHROPIC_API_KEY?.trim() ? ['@elizaos/plugin-anthropic'] : []),
-    ...(process.env.OPENROUTER_API_KEY?.trim() ? ['@elizaos/plugin-openrouter'] : []),
+    ...(isValidToken(process.env.ANTHROPIC_API_KEY) ? ['@elizaos/plugin-anthropic'] : []),
+    ...(isValidToken(process.env.OPENROUTER_API_KEY) ? ['@elizaos/plugin-openrouter'] : []),
 
     // Embedding-capable plugins (before platform plugins per documented order)
-    ...(process.env.OPENAI_API_KEY?.trim() ? ['@elizaos/plugin-openai'] : []),
-    ...(process.env.GOOGLE_GENERATIVE_AI_API_KEY?.trim() ? ['@elizaos/plugin-google-genai'] : []),
+    ...(isValidToken(process.env.OPENAI_API_KEY) ? ['@elizaos/plugin-openai'] : []),
+    ...(isValidToken(process.env.GOOGLE_GENERATIVE_AI_API_KEY) ? ['@elizaos/plugin-google-genai'] : []),
 
     // Platform plugins
-    ...(process.env.DISCORD_API_TOKEN?.trim() ? ['@elizaos/plugin-discord'] : []),
-    ...(process.env.TWITTER_API_KEY?.trim() &&
-    process.env.TWITTER_API_SECRET_KEY?.trim() &&
-    process.env.TWITTER_ACCESS_TOKEN?.trim() &&
-    process.env.TWITTER_ACCESS_TOKEN_SECRET?.trim()
+    ...(isValidToken(process.env.DISCORD_API_TOKEN) ? ['@elizaos/plugin-discord'] : []),
+    ...(isValidToken(process.env.TWITTER_API_KEY) &&
+    isValidToken(process.env.TWITTER_API_SECRET_KEY) &&
+    isValidToken(process.env.TWITTER_ACCESS_TOKEN) &&
+    isValidToken(process.env.TWITTER_ACCESS_TOKEN_SECRET)
       ? ['@elizaos/plugin-twitter']
       : []),
-    ...(process.env.TELEGRAM_BOT_TOKEN?.trim() ? ['@elizaos/plugin-telegram'] : []),
+    ...(isValidToken(process.env.TELEGRAM_BOT_TOKEN) ? ['@elizaos/plugin-telegram'] : []),
 
     // Bootstrap plugin
     ...(!process.env.IGNORE_BOOTSTRAP ? ['@elizaos/plugin-bootstrap'] : []),
 
     // Only include Ollama as fallback if no other LLM providers are configured
-    ...(!process.env.ANTHROPIC_API_KEY?.trim() &&
-    !process.env.OPENROUTER_API_KEY?.trim() &&
-    !process.env.OPENAI_API_KEY?.trim() &&
-    !process.env.GOOGLE_GENERATIVE_AI_API_KEY?.trim()
+    ...(!isValidToken(process.env.ANTHROPIC_API_KEY) &&
+    !isValidToken(process.env.OPENROUTER_API_KEY) &&
+    !isValidToken(process.env.OPENAI_API_KEY) &&
+    !isValidToken(process.env.GOOGLE_GENERATIVE_AI_API_KEY)
       ? ['@elizaos/plugin-ollama']
       : []),
   ];
@@ -260,7 +298,7 @@ export function getElizaCharacter(): Character {
   return {
     ...baseCharacter,
     plugins,
-  } as Character;
+  } as Character & { plugins: string[] };
 }
 
 /**

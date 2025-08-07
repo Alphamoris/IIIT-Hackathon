@@ -92,29 +92,29 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should include Ollama fallback when OpenAI is the primary provider', () => {
-      process.env.OPENAI_API_KEY = 'test-key';
+      process.env.OPENAI_API_KEY = 'sk-proj-test-key-12345678901234567890123456789012345678901234567890';
       const character = getElizaCharacter();
       expect(character.plugins).toContain(PLUGINS.OLLAMA);
       expect(character.plugins).toContain(PLUGINS.OPENAI);
     });
 
     it('should include ollama when only Anthropic is available', () => {
-      process.env.ANTHROPIC_API_KEY = 'test-key';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-test-key-12345678901234567890123456789012345678901234567890';
       const character = getElizaCharacter();
       expect(character.plugins).toContain(PLUGINS.OLLAMA);
       expect(character.plugins).toContain(PLUGINS.ANTHROPIC);
     });
 
     it('should include ollama when Google GenAI is available', () => {
-      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'test-key';
+      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-test-key-12345678901234567890123456789012345678901234567890';
       const character = getElizaCharacter();
       expect(character.plugins).toContain(PLUGINS.OLLAMA);
       expect(character.plugins).toContain(PLUGINS.GOOGLE_GENAI);
     });
 
     it('should include ollama when only text-only providers are available', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENROUTER_API_KEY = 'openrouter-key';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.OPENROUTER_API_KEY = 'openrouter-api-key-12345678901234567890123456789012345678901234567890';
       const character = getElizaCharacter();
       expect(character.plugins).toContain(PLUGINS.OLLAMA);
       expect(character.plugins).toContain(PLUGINS.ANTHROPIC);
@@ -124,8 +124,8 @@ describe('Character Plugin Ordering', () => {
 
   describe('Embedding Plugin Priority (Always Last)', () => {
     it('should place OpenAI after text-only plugins', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENAI_API_KEY = 'openai-key';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.OPENAI_API_KEY = 'sk-proj-openai-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
       const anthropicIndex = character.plugins.indexOf(PLUGINS.ANTHROPIC);
@@ -137,7 +137,7 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should always place Ollama last as universal fallback', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
       const anthropicIndex = character.plugins.indexOf(PLUGINS.ANTHROPIC);
@@ -149,8 +149,8 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should place Google Generative AI after text-only plugins', () => {
-      process.env.OPENROUTER_API_KEY = 'openrouter-key';
-      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-key';
+      process.env.OPENROUTER_API_KEY = 'openrouter-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-genai-api-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
       const openrouterIndex = character.plugins.indexOf(PLUGINS.OPENROUTER);
@@ -162,8 +162,8 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should place OpenAI and Google plugins before bootstrap, Ollama after', () => {
-      process.env.OPENAI_API_KEY = 'openai-key';
-      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-key';
+      process.env.OPENAI_API_KEY = 'sk-proj-openai-key-12345678901234567890123456789012345678901234567890';
+      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-genai-api-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
       const bootstrapIndex = character.plugins.indexOf(PLUGINS.BOOTSTRAP);
@@ -180,8 +180,8 @@ describe('Character Plugin Ordering', () => {
 
   describe('Complex Environment Combinations', () => {
     it('should handle Anthropic + OpenAI correctly (Ollama always last)', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENAI_API_KEY = 'openai-key';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.OPENAI_API_KEY = 'sk-proj-openai-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
       const expectedOrder = [
@@ -196,7 +196,7 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should handle OpenRouter correctly (Ollama always last)', () => {
-      process.env.OPENROUTER_API_KEY = 'openrouter-key';
+      process.env.OPENROUTER_API_KEY = 'openrouter-api-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
       const expectedOrder = [PLUGINS.SQL, PLUGINS.OPENROUTER, PLUGINS.BOOTSTRAP, PLUGINS.OLLAMA];
@@ -205,11 +205,11 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should handle all AI providers (embedding plugins last)', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENROUTER_API_KEY = 'openrouter-key';
-      process.env.OPENAI_API_KEY = 'openai-key';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.OPENROUTER_API_KEY = 'openrouter-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.OPENAI_API_KEY = 'sk-proj-openai-key-12345678901234567890123456789012345678901234567890';
       process.env.OLLAMA_API_ENDPOINT = 'http://localhost:11434';
-      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-key';
+      process.env.GOOGLE_GENERATIVE_AI_API_KEY = 'google-genai-api-key-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
 
@@ -233,10 +233,10 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should handle platform plugins with AI providers', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENAI_API_KEY = 'openai-key';
-      process.env.DISCORD_API_TOKEN = 'discord-token';
-      process.env.TELEGRAM_BOT_TOKEN = 'telegram-token';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890';
+      process.env.OPENAI_API_KEY = 'sk-proj-12345678901234567890123456789012345678901234567890';
+      process.env.DISCORD_API_TOKEN = 'discord-bot-token-12345678901234567890123456789012345678901234567890';
+      process.env.TELEGRAM_BOT_TOKEN = '1234567890:AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSs';
 
       const character = getElizaCharacter();
 
@@ -253,12 +253,12 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should handle Twitter plugin with all required tokens', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENAI_API_KEY = 'openai-key';
-      process.env.TWITTER_API_KEY = 'twitter-key';
-      process.env.TWITTER_API_SECRET_KEY = 'twitter-secret';
-      process.env.TWITTER_ACCESS_TOKEN = 'twitter-token';
-      process.env.TWITTER_ACCESS_TOKEN_SECRET = 'twitter-token-secret';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890';
+      process.env.OPENAI_API_KEY = 'sk-proj-12345678901234567890123456789012345678901234567890';
+      process.env.TWITTER_API_KEY = 'twitter-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.TWITTER_API_SECRET_KEY = 'twitter-api-secret-12345678901234567890123456789012345678901234567890';
+      process.env.TWITTER_ACCESS_TOKEN = 'twitter-access-token-12345678901234567890123456789012345678901234567890';
+      process.env.TWITTER_ACCESS_TOKEN_SECRET = 'twitter-access-token-secret-12345678901234567890123456789012345678901234567890';
 
       const character = getElizaCharacter();
 
@@ -273,7 +273,7 @@ describe('Character Plugin Ordering', () => {
     });
 
     it('should NOT include Twitter plugin with incomplete tokens', () => {
-      process.env.TWITTER_API_KEY = 'twitter-key';
+      process.env.TWITTER_API_KEY = 'twitter-api-key-12345678901234567890123456789012345678901234567890';
       // Missing other required Twitter tokens
 
       const character = getElizaCharacter();
@@ -357,9 +357,9 @@ describe('Character Plugin Ordering', () => {
       expect(endTime - startTime).toBeLessThan(1000); // Should complete within 1 second
     });
     it('should maintain consistent order across multiple calls', () => {
-      process.env.ANTHROPIC_API_KEY = 'anthropic-key';
-      process.env.OPENAI_API_KEY = 'openai-key';
-      process.env.DISCORD_API_TOKEN = 'discord-token';
+      process.env.ANTHROPIC_API_KEY = 'anthropic-api-key-12345678901234567890123456789012345678901234567890';
+      process.env.OPENAI_API_KEY = 'sk-proj-openai-key-12345678901234567890123456789012345678901234567890';
+      process.env.DISCORD_API_TOKEN = 'discord-bot-token-12345678901234567890123456789012345678901234567890';
 
       const character1 = getElizaCharacter();
       const character2 = getElizaCharacter();

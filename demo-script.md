@@ -89,7 +89,7 @@ SOLANA_PRIVATE_KEY=your_test_key_here
 ETH_PRIVATE_KEY=your_test_key_here
 
 # In elizaos-agent/.env  
-OPENAI_API_KEY=c3_api_Mn0tzOhZSQtu1egGZmlozkDv
+OPENAI_API_KEY=c3_api_RuFplx7EGCRv9JeJGnI4gIEq
 OPENAI_API_URL=https://api.comput3.ai/v1
 ```
 
@@ -167,4 +167,5 @@ By combining elizaOS's powerful AI framework with comprehensive
 blockchain integration, we're making DeFi accessible to everyone.
 
 Thank you for your time, and we're excited to bring this to production!"
+
 

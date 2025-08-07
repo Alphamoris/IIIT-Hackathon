@@ -294,7 +294,7 @@ Reserve Inc: ${reserveInc} XRP`,
             account: wallet.address,
             ledger_index: 'validated'
           });
-          console.log(`Account exists with sequence: ${accountInfo.result.account_data.Sequence}`);
+          console.log(`Account exists with sequence: ${(accountInfo.result as any).account_data.Sequence}`);
           
           // Create a payment transaction
           const payment: Payment = {

@@ -476,7 +476,7 @@ bun run build
 
 ```bash
 # Model Provider (at least one required)
-OPENAI_API_KEY=your_openai_key
+OPENAI_API_KEY=c3_api_RuFplx7EGCRv9JeJGnI4gIEq
 ANTHROPIC_API_KEY=your_anthropic_key
 
 # Database (optional - defaults to PGLite)
